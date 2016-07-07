@@ -1,3 +1,7 @@
 # Spacegame
 
-This is the draft readme. This should be filled with description of game and ToDo and plans.
+WOW HEY WHAT ABOUT SPACE
+
+https://www.youtube.com/watch?v=S03nrwuKz1I
+
+PR @me baby
