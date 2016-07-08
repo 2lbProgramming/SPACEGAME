@@ -1,7 +1,6 @@
 # Spacegame
+A space game in [Lua/LOVE2D](https://love2d.org/). Contributions welcome.
 
-WOW HEY WHAT ABOUT SPACE
-
-https://www.youtube.com/watch?v=S03nrwuKz1I
-
-PR @me baby
+# Tools that might be helpful
+[Aseprite](http://www.aseprite.org/) - animated sprite editor & pixel art
+[Krita](https://krita.org/en/) - Open Source Software for Concept Artists, Digital Painters, and Illustrators
