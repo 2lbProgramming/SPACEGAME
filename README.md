@@ -1,13 +1,3 @@
-# Spacegame
-A space game in [Lua/LOVE2D](https://love2d.org/). Contributions welcome.
+# Spacegame -- Tutorial version! 
 
-# Tools that might be helpful
-## Art
-[Aseprite](http://www.aseprite.org/) - animated sprite editor & pixel art
-
-[Krita](https://krita.org/en/) - Open Source Software for Concept Artists, Digital Painters, and Illustrators
-
-## Assets
-[OpenGameArt](http://opengameart.org/)
-
-[Freesound](https://www.freesound.org/)
+Following http://www.osmstudios.com/tutorials/your-first-love2d-game-in-200-lines-part-1-of-3 and/or probably a mish-mash of others. Feel free to mess around. 
