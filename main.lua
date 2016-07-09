@@ -23,7 +23,7 @@ end
 function love.update(dt)
   -- Quitting
   if love.keyboard.isDown('escape') then
-    love.event.push('quit')
+    love.event.quit()
   end
 
   if love.keyboard.isDown('left', 'a') then
