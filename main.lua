@@ -12,14 +12,12 @@ images = {}
 -- Bullet storage
 bullets = {} -- array of current bullets being drawn and updated
 
-player = { x = 200, y = 710, speed = 150, img = nil }
-
 function love.load(arg)
 	local lg = love.graphics
 	images.bullet = lg.newImage('assets/bullet.png')
 	images.player = lg.newImage('assets/fighter.png') -- CC0 licensed from opengameart
 	
-	player.img = images.player
+	player = { x = 200, y = 710, speed = 150, img = images.player }
 end
 
 function love.update(dt)
