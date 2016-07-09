@@ -6,9 +6,8 @@ canShoot = true
 canShootTimerMax = 0.2
 canShootTimer = canShootTimerMax
 
--- Image init, later change to a table?
--- tutorial says we'll declare that object with each bullet created
-bulletImg = nil
+-- resources
+images = {}
 
 -- Bullet storage
 bullets = {} -- array of current bullets being drawn and updated
@@ -16,8 +15,11 @@ bullets = {} -- array of current bullets being drawn and updated
 player = { x = 200, y = 710, speed = 150, img = nil }
 
 function love.load(arg)
-  player.img = love.graphics.newImage('assets/fighter.png') -- CC0 licensed from opengameart
-  bulletImg = love.graphics.newImage('assets/bullet.png')
+	local lg = love.graphics
+	images.bullet = lg.newImage('assets/bullet.png')
+	images.player = lg.newImage('assets/fighter.png') -- CC0 licensed from opengameart
+	
+	player.img = images.player
 end
 
 function love.update(dt)
@@ -45,7 +47,7 @@ function love.update(dt)
   -- Firing
   if love.keyboard.isDown('space', ' ', 'rctrl', 'lctrl', 'ctrl') and canShoot then
     -- Create some bullets
-    newBullet = { x = player.x + (player.img:getWidth()/2), y = player.y, img = bulletImg }
+    newBullet = { x = player.x + (images.player:getWidth()/2), y = player.y, img = images.bullet }
     table.insert(bullets, newBullet)
     canShoot = false
     canShootTimer = canShootTimerMax
