@@ -18,8 +18,9 @@ function love.load(arg)
 	local lg = love.graphics
 	images.bullet = lg.newImage('assets/bullet.png')
 	images.player = lg.newImage('assets/fighter.png') -- CC0 licensed from opengameart
-	
-	player = { x = 200, y = 710, speed = 150, img = images.player, update = player_upd}
+  images.shrapnel = lg.newImage('assets/shrapnel.png')
+	player = { x = 200, y = 640, speed = 150, img = images.player, update = player_upd}
+  shrapnel = require 'src/shrapnel'
 end
 
 function player_upd(self, dt)
@@ -63,9 +64,13 @@ function love.update(dt)
     bullet.y = bullet.y - (250 * dt)
 
     if bullet.y < 0 then -- remove when they pass off screen
+      shrapnel.add(bullet.x
+        + (images.bullet:getWidth() - images.shrapnel:getWidth()) / 2, 0.1)
       table.remove(bullets, i)
     end
+
   end
+  shrapnel.update(dt)
 end
 
 function love.draw(dt)
@@ -76,4 +81,6 @@ function love.draw(dt)
   for i, bullet in ipairs(bullets) do
     love.graphics.draw(bullet.img, bullet.x, bullet.y)
   end
+
+  shrapnel.draw()
 end
